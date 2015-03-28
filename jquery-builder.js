@@ -3,7 +3,7 @@ var JQueryBuilder = (function () {
         return (function () {
             var Parent = Array.prototype,
                 jQuery = function () {
-                    // Найдено на просторах гугла, сильно не пинать.
+                    // ГЌГ Г©Г¤ГҐГ­Г® Г­Г  ГЇГ°Г®Г±ГІГ®Г°Г Гµ ГЈГіГЈГ«Г , Г±ГЁГ«ГјГ­Г® Г­ГҐ ГЇГЁГ­Г ГІГј.
                     var JQuery = function () {}, // Temp === JQuery
                         inst,
                         ret,
@@ -18,36 +18,36 @@ var JQueryBuilder = (function () {
                 };
 
             
-            // Наследуем от массива
+            // ГЌГ Г±Г«ГҐГ¤ГіГҐГ¬ Г®ГІ Г¬Г Г±Г±ГЁГўГ 
             jQuery.fn = jQuery.prototype = [];
 
             /**
-             * Массив аргументов, которые будут переданы в init()
+             * ГЊГ Г±Г±ГЁГў Г Г°ГЈГіГ¬ГҐГ­ГІГ®Гў, ГЄГ®ГІГ®Г°Г»ГҐ ГЎГіГ¤ГіГІ ГЇГҐГ°ГҐГ¤Г Г­Г» Гў init()
              * @type {Array}
              */
             jQuery.fn.arguments = [];
 
             /**
-             * Собственно, конструктор
+             * Г‘Г®ГЎГ±ГІГўГҐГ­Г­Г®, ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°
              * @type {Function}
              */
             jQuery.fn.constructor = jQuery;
 
             jQuery.fn.name = 'jQuery';
             /**
-             * Точка входа. Функция, инициализирующая нашу выборку
+             * Г’Г®Г·ГЄГ  ГўГµГ®Г¤Г . Г”ГіГ­ГЄГ¶ГЁГї, ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§ГЁГ°ГіГѕГ№Г Гї Г­Г ГёГі ГўГ»ГЎГ®Г°ГЄГі
              * @type {Function}
              */
             jQuery.fn.init = function () {
-                // this.arguments = arguments; нельзя, потому что arguments - не массив, а объект,
-                // поэтому нужно перегнать его в массив, [].slice.call это и делает в этом случае
+                // this.arguments = arguments; Г­ГҐГ«ГјГ§Гї, ГЇГ®ГІГ®Г¬Гі Г·ГІГ® arguments - Г­ГҐ Г¬Г Г±Г±ГЁГў, Г  Г®ГЎГєГҐГЄГІ,
+                // ГЇГ®ГЅГІГ®Г¬Гі Г­ГіГ¦Г­Г® ГЇГҐГ°ГҐГЈГ­Г ГІГј ГҐГЈГ® Гў Г¬Г Г±Г±ГЁГў, [].slice.call ГЅГІГ® ГЁ Г¤ГҐГ«Г ГҐГІ Гў ГЅГІГ®Г¬ Г±Г«ГіГ·Г ГҐ
                 this.arguments = [].slice.call(arguments);
                 return initCallback.apply(this, this.arguments);
             };
             
             /**
              * [].push();
-             * @param obj Объект, который нужно добавить в массив
+             * @param obj ГЋГЎГєГҐГЄГІ, ГЄГ®ГІГ®Г°Г»Г© Г­ГіГ¦Г­Г® Г¤Г®ГЎГ ГўГЁГІГј Гў Г¬Г Г±Г±ГЁГў
              * @returns {jQuery.fn}
              */
             jQuery.fn.push = function (obj) {
@@ -58,7 +58,7 @@ var JQueryBuilder = (function () {
             
             /**
              * [].join();
-             * @param delimiter Разделитель. Необязательный аргумент. По умолчанию это будет запятая
+             * @param delimiter ГђГ Г§Г¤ГҐГ«ГЁГІГҐГ«Гј. ГЌГҐГ®ГЎГїГ§Г ГІГҐГ«ГјГ­Г»Г© Г Г°ГЈГіГ¬ГҐГ­ГІ. ГЏГ® ГіГ¬Г®Г«Г·Г Г­ГЁГѕ ГЅГІГ® ГЎГіГ¤ГҐГІ Г§Г ГЇГїГІГ Гї
              * @returns {jQuery.fn|string}
              */
             jQuery.fn.join = function (delimiter) {
@@ -111,7 +111,7 @@ var JQueryBuilder = (function () {
 
             
             /**
-             * Возвращает размер массива, алиас для arr.length
+             * Г‚Г®Г§ГўГ°Г Г№Г ГҐГІ Г°Г Г§Г¬ГҐГ° Г¬Г Г±Г±ГЁГўГ , Г Г«ГЁГ Г± Г¤Г«Гї arr.length
              * @returns {jQuery.fn|Number}
              */
             jQuery.fn.size = function() {
@@ -120,7 +120,7 @@ var JQueryBuilder = (function () {
 
             
             /**
-             * Возвращает количество элементов, подходящих под выборку
+             * Г‚Г®Г§ГўГ°Г Г№Г ГҐГІ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў, ГЇГ®Г¤ГµГ®Г¤ГїГ№ГЁГµ ГЇГ®Г¤ ГўГ»ГЎГ®Г°ГЄГі
              * @returns {Number}
              */
             jQuery.fn.count = function(filter) {
@@ -139,7 +139,7 @@ var JQueryBuilder = (function () {
 
             
             /**
-             * Функция для прохода по всему массиву через замыкание, аналог [].forEach()
+             * Г”ГіГ­ГЄГ¶ГЁГї Г¤Г«Гї ГЇГ°Г®ГµГ®Г¤Г  ГЇГ® ГўГ±ГҐГ¬Гі Г¬Г Г±Г±ГЁГўГі Г·ГҐГ°ГҐГ§ Г§Г Г¬Г»ГЄГ Г­ГЁГҐ, Г Г­Г Г«Г®ГЈ [].forEach()
              * @param callback
              * @returns {jQuery.fn}
              */
@@ -154,7 +154,7 @@ var JQueryBuilder = (function () {
 
             
             /**
-             * Возвращает первый элемент из выборки
+             * Г‚Г®Г§ГўГ°Г Г№Г ГҐГІ ГЇГҐГ°ГўГ»Г© ГЅГ«ГҐГ¬ГҐГ­ГІ ГЁГ§ ГўГ»ГЎГ®Г°ГЄГЁ
              * @returns {*}
              */
             jQuery.fn.first = function () {
@@ -163,7 +163,7 @@ var JQueryBuilder = (function () {
 
             
             /**
-             * Возвращает последний элемент из выборки
+             * Г‚Г®Г§ГўГ°Г Г№Г ГҐГІ ГЇГ®Г±Г«ГҐГ¤Г­ГЁГ© ГЅГ«ГҐГ¬ГҐГ­ГІ ГЁГ§ ГўГ»ГЎГ®Г°ГЄГЁ
              * @returns {*}
              */
             jQuery.fn.last = function () {
@@ -172,8 +172,8 @@ var JQueryBuilder = (function () {
 
             
             /**
-             * Возвращает элемент из выборки, находящийся по указанному индексу
-             * @param i Индекс
+             * Г‚Г®Г§ГўГ°Г Г№Г ГҐГІ ГЅГ«ГҐГ¬ГҐГ­ГІ ГЁГ§ ГўГ»ГЎГ®Г°ГЄГЁ, Г­Г ГµГ®Г¤ГїГ№ГЁГ©Г±Гї ГЇГ® ГіГЄГ Г§Г Г­Г­Г®Г¬Гі ГЁГ­Г¤ГҐГЄГ±Гі
+             * @param i Г€Г­Г¤ГҐГЄГ±
              * @returns {*}
              */
             jQuery.fn.get = function (i) {
@@ -182,9 +182,9 @@ var JQueryBuilder = (function () {
 
             
             /**
-             * Устанавливает значение элементу, находящемуся по указанному индексу
-             * @param index Индекс
-             * @param value Новое значение
+             * Г“Г±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГІ Г§Г­Г Г·ГҐГ­ГЁГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГі, Г­Г ГµГ®Г¤ГїГ№ГҐГ¬ГіГ±Гї ГЇГ® ГіГЄГ Г§Г Г­Г­Г®Г¬Гі ГЁГ­Г¤ГҐГЄГ±Гі
+             * @param index Г€Г­Г¤ГҐГЄГ±
+             * @param value ГЌГ®ГўГ®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ
              * @returns {jQuery.fn}
              */
             jQuery.fn.set = function (index, value) {
@@ -194,9 +194,9 @@ var JQueryBuilder = (function () {
 
             
             /**
-             * Геттер-сеттер, аналог get и set в jQuery-style
-             * @param index Индекс
-             * @param value Значение. Если передано, то вызовется set, иначе get
+             * ГѓГҐГІГІГҐГ°-Г±ГҐГІГІГҐГ°, Г Г­Г Г«Г®ГЈ get ГЁ set Гў jQuery-style
+             * @param index Г€Г­Г¤ГҐГЄГ±
+             * @param value Г‡Г­Г Г·ГҐГ­ГЁГҐ. Г…Г±Г«ГЁ ГЇГҐГ°ГҐГ¤Г Г­Г®, ГІГ® ГўГ»Г§Г®ГўГҐГІГ±Гї set, ГЁГ­Г Г·ГҐ get
              * @returns {*}
              */
             jQuery.fn.el = function (index, value) {
@@ -208,8 +208,8 @@ var JQueryBuilder = (function () {
 
             
             /**
-             * Удаляет элемент по указанному индексу
-             * TODO Придумать менее изощрённый способ
+             * Г“Г¤Г Г«ГїГҐГІ ГЅГ«ГҐГ¬ГҐГ­ГІ ГЇГ® ГіГЄГ Г§Г Г­Г­Г®Г¬Гі ГЁГ­Г¤ГҐГЄГ±Гі
+             * TODO ГЏГ°ГЁГ¤ГіГ¬Г ГІГј Г¬ГҐГ­ГҐГҐ ГЁГ§Г®Г№Г°ВёГ­Г­Г»Г© Г±ГЇГ®Г±Г®ГЎ
              * @param index
              * @returns {*}
              */
@@ -227,7 +227,7 @@ var JQueryBuilder = (function () {
             };
             
             /**
-             * Формирует настоящий нативный массив из текущей выборки
+             * Г”Г®Г°Г¬ГЁГ°ГіГҐГІ Г­Г Г±ГІГ®ГїГ№ГЁГ© Г­Г ГІГЁГўГ­Г»Г© Г¬Г Г±Г±ГЁГў ГЁГ§ ГІГҐГЄГіГ№ГҐГ© ГўГ»ГЎГ®Г°ГЄГЁ
              * @returns {jQuery.fn|Array}
              */
             jQuery.fn.toArray = function () {
@@ -243,7 +243,7 @@ var JQueryBuilder = (function () {
             };
 
             /**
-             * Расширяет текущий функционал
+             * ГђГ Г±ГёГЁГ°ГїГҐГІ ГІГҐГЄГіГ№ГЁГ© ГґГіГ­ГЄГ¶ГЁГ®Г­Г Г«
              * @param name
              * @param fn
              * @returns {jQuery.fn}
@@ -265,8 +265,8 @@ var JQueryBuilder = (function () {
             };
 
             /**
-             * Если объект является скалярным, то возвращает его значение, иначе возвращает сам объект
-             * @param obj Объект
+             * Г…Г±Г«ГЁ Г®ГЎГєГҐГЄГІ ГїГўГ«ГїГҐГІГ±Гї Г±ГЄГ Г«ГїГ°Г­Г»Г¬, ГІГ® ГўГ®Г§ГўГ°Г Г№Г ГҐГІ ГҐГЈГ® Г§Г­Г Г·ГҐГ­ГЁГҐ, ГЁГ­Г Г·ГҐ ГўГ®Г§ГўГ°Г Г№Г ГҐГІ Г±Г Г¬ Г®ГЎГєГҐГЄГІ
+             * @param obj ГЋГЎГєГҐГЄГІ
              * @returns {XMLList|XML|Namespace|*|Array|boolean}
              */
             jQuery.value = function (obj) {
@@ -275,7 +275,7 @@ var JQueryBuilder = (function () {
 
             
             /**
-             *  Старый добрый jQuery.extend
+             *  Г‘ГІГ Г°Г»Г© Г¤Г®ГЎГ°Г»Г© jQuery.extend
              */
             jQuery.extend = function() {
                 var src, copyIsArray, copy, name, options, clone,
@@ -349,7 +349,7 @@ var JQueryBuilder = (function () {
     }
 
     /**
-     * Сам конструктор
+     * Г‘Г Г¬ ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°
      */
     function JQueryBuilder(initCallback) {
         this.jQuery = initjQuery(initCallback);
@@ -357,7 +357,7 @@ var JQueryBuilder = (function () {
 
     
     /**
-     * Формирует новую выборку из переданных аргументов
+     * Г”Г®Г°Г¬ГЁГ°ГіГҐГІ Г­Г®ГўГіГѕ ГўГ»ГЎГ®Г°ГЄГі ГЁГ§ ГЇГҐГ°ГҐГ¤Г Г­Г­Г»Гµ Г Г°ГЈГіГ¬ГҐГ­ГІГ®Гў
      * @returns {JQueryBuilder}
      */
     JQueryBuilder.from = function () {
@@ -370,8 +370,8 @@ var JQueryBuilder = (function () {
 
     
     /**
-     * Формирует новую выборку из переданного массива в конструктор, либо в результирующую функцию
-     * @param array Сам массив, необязательный аргумент
+     * Г”Г®Г°Г¬ГЁГ°ГіГҐГІ Г­Г®ГўГіГѕ ГўГ»ГЎГ®Г°ГЄГі ГЁГ§ ГЇГҐГ°ГҐГ¤Г Г­Г­Г®ГЈГ® Г¬Г Г±Г±ГЁГўГ  Гў ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°, Г«ГЁГЎГ® Гў Г°ГҐГ§ГіГ«ГјГІГЁГ°ГіГѕГ№ГіГѕ ГґГіГ­ГЄГ¶ГЁГѕ
+     * @param array Г‘Г Г¬ Г¬Г Г±Г±ГЁГў, Г­ГҐГ®ГЎГїГ§Г ГІГҐГ«ГјГ­Г»Г© Г Г°ГЈГіГ¬ГҐГ­ГІ
      * @returns {JQueryBuilder}
      */
     JQueryBuilder.fromArray = function (array) {
@@ -385,26 +385,8 @@ var JQueryBuilder = (function () {
         });
     };
 
-    
     /**
-     * # Написать доку
-     */
-    JQueryBuilder.fromArray = function (array) { // Что это за ночной бред?
-        var args = arguments;
-        return new JQueryBuilder(function (anotherArray) {
-            var array = args;
-            if (array.length === 0) {
-                array = arguments;
-            }
-            for(var i = 0; i < array.length; i++) {
-                this.push(array[i]);
-            }
-        });
-    };
-
-    
-    /**
-     * # Написать доку
+     * # ГЌГ ГЇГЁГ±Г ГІГј Г¤Г®ГЄГі
      */
     JQueryBuilder.simple = function (array) {
         var builder = new JQueryBuilder(function (selector, context) {
@@ -432,7 +414,7 @@ var JQueryBuilder = (function () {
         });
 
         /**
-         * # Написать доку
+         * # ГЌГ ГЇГЁГ±Г ГІГј Г¤Г®ГЄГі
          */
         builder.is = function (selector, el, i) {
             switch (typeof selector) {
