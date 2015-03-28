@@ -28,4 +28,4 @@ var result = $('abcde', 'xyZ', 'HAAR')
 		.lower()
 	;
 
-console.log(result.toString(4));
+console.log(result); ["edcba", "zyx", "raah"]
