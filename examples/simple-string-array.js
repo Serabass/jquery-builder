@@ -23,7 +23,7 @@ $.fn.extend({
 		});
 	}
 });
-var result = $(['abcde', 'xyZ', 'HAAR'])
+var result = $('abcde', 'xyZ', 'HAAR')
 		.reverse()
 		.lower()
 	;
